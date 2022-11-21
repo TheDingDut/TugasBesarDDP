@@ -5,12 +5,21 @@
 void display_table(char board[]) {
 	int i;
 
-	for (i = 0; i < 49; i++) {
-		printf("%c ", board[i]);
-		if (((i + 1) % 7) == 0) {
-			printf("\n");
-		}
-	}
+	printf("+-----------------------------------------+\n");
+	printf("|  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |\n", board[0], board[1], board[2], board[3], board[4], board[5], board[6]);
+	printf("+-----------------------------------------+\n");
+	printf("|  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |\n", board[7], board[8], board[9], board[10], board[11], board[12], board[13]);
+	printf("+-----------------------------------------+\n");
+	printf("|  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |\n", board[14], board[15], board[16], board[17], board[18], board[19], board[20]);
+	printf("+-----------------------------------------+\n");
+	printf("|  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |\n", board[21], board[22], board[23], board[24], board[25], board[26], board[27]);
+	printf("+-----------------------------------------+\n");
+	printf("|  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |\n", board[28], board[29], board[30], board[31], board[32], board[33], board[34]);
+	printf("+-----------------------------------------+\n");
+	printf("|  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |\n", board[35], board[36], board[37], board[38], board[39], board[40], board[41]);
+	printf("+-----------------------------------------+\n");
+	printf("|  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |  %c  |\n", board[42], board[43], board[44], board[45], board[46], board[47], board[48]);
+	printf("+-----------------------------------------+\n");
 }
 
 void insert(char board[],char *turn,int *valid) {

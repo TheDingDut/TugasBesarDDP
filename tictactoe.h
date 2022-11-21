@@ -24,7 +24,7 @@ void insert(char board[],char *turn,int *valid) {
 
 	if (board[index - 1] != '-')
 	{
-		printf("invalid move, opponent turn\n\n");
+		printf("invalid move\n\n");
 		*valid = 0;
 	}else{
 		board[index - 1] = *turn;

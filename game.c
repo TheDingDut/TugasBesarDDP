@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <conio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 #include "tictactoe.h"
 
 int main() {
@@ -9,6 +10,8 @@ int main() {
 	int turn_count = 0, valid = 1;
 
 	while (game) {
+		cover();
+		system("cls");
 		display_table(board);
 		insert(board, &turn, &valid);
 		turn_count++;

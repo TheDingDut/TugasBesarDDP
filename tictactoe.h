@@ -1,6 +1,20 @@
 #include <stdio.h>
+#include <conio.h>
 #include <stdbool.h>
 #define SENTINEL -999
+
+void cover(){
+	printf("+-----------------------------------------+\n");
+	printf("| Selamat Datang di                       |\n");
+	printf("| Permainan TicTacToe                     |\n");
+	printf("| Disusun Oleh:                           |\n");
+	printf("| 1. Hasna Fitriyani Khairunnisa          |\n");
+	printf("| 2. Muhammad Fikri Nur Sya'bani          |\n");
+	printf("| 3. Naffa Lenteranisa                    |\n");
+	printf("+-----------------------------------------+\n");
+	printf("Tekan Enter Untuk Lanjut");
+	getchar();
+}
 
 void display_table(char board[]) {
 	int i;

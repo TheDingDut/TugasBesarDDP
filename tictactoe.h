@@ -16,6 +16,24 @@ void cover(){
 	getchar();
 }
 
+void menu(){
+	printf("+-----------------------------------------+\n");
+	printf("| Menu:                                   |\n");
+	printf("| 1. Mulai Main                           |\n");
+	printf("| 2. Ganti Nama Pemain                    |\n");
+	printf("| 99. Keluar Program                      |\n");
+	printf("+-----------------------------------------+\n");
+}
+
+void dimensionOption(){
+	printf("+-----------------------------------------+\n");
+	printf("| Menu:                                   |\n");
+	printf("| 1. 3 x 3                                |\n");
+	printf("| 2. 5 x 5                                |\n");
+	printf("| 3. 7 x 7                                |\n");
+	printf("+-----------------------------------------+\n");
+}
+
 void display_table(char board[]) {
 	int i;
 
@@ -39,7 +57,7 @@ void display_table(char board[]) {
 void insert(char board[],char *turn,int *valid) {
 	int index;
 	printf("Turn of %c\nEnter index : ", *turn);
-	scanf_s("%d", &index);
+	scanf("%d", &index);
 
 	if (index == SENTINEL) {
 		exit(0);

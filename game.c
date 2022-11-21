@@ -55,18 +55,24 @@ int main()
 			}
 			break;
 		case 2:
-			int opsiGantiNama;
-			namaOption();
-			printf("Pilih Opsi \t\t: ");
-			scanf("%d", &opsiGantiNama);
-			switch (opsiGantiNama)
-			{
-			case 1:
-				printf("Masukkan Nama Pemain 1 \t: ");
-				break;
+			printf("\nMasukkan Nama Pemain 1 \t: ");
+			scanf("%s", pemain1);
+			printf("Masukkan Nama Pemain 2 \t: ");
+			scanf("%s", pemain2);
 			
-			default:
-				break;
+			int count = strlen(pemain1);
+			int count1 = strlen(pemain2);
+
+			printf("\nPemain 1 \t\t: ");
+			for (int i = 0; i < count; i++)
+			{
+				printf("%c", pemain1[i]);
+			}
+
+			printf("\nPemain 2 \t\t: ");
+			for (int i = 0; i < count1; i++)
+			{
+				printf("%c", pemain2[i]);
 			}
 			break;
 		default:

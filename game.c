@@ -7,7 +7,7 @@ int main() {
 	bool game = true;
 	int turn_count = 0;
 
-	printf("WELCOME TO TIC TAC TOE!!!!!\n(by @dekaottoman, type '-999' to exit)\n\n");
+	
 	while (game) {
 		display_table(board);
 		insert(board, &turn);

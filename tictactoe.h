@@ -4,7 +4,7 @@
 #define SENTINEL -999
 
 void cover(){
-	printf("+-----------------------------------------+\n");
+	printf("\n+-----------------------------------------+\n");
 	printf("| Selamat Datang di                       |\n");
 	printf("| Permainan TicTacToe                     |\n");
 	printf("| Disusun Oleh:                           |\n");
@@ -12,7 +12,7 @@ void cover(){
 	printf("| 2. Muhammad Fikri Nur Sya'bani          |\n");
 	printf("| 3. Naffa Lenteranisa                    |\n");
 	printf("+-----------------------------------------+\n");
-	printf("Tekan Enter Untuk Lanjut");
+	printf("Tekan Enter Untuk Lanjut\n");
 	getchar();
 }
 
@@ -31,6 +31,14 @@ void dimensionOption(){
 	printf("| 1. 3 x 3                                |\n");
 	printf("| 2. 5 x 5                                |\n");
 	printf("| 3. 7 x 7                                |\n");
+	printf("+-----------------------------------------+\n");
+}
+
+void namaOption(){
+	printf("+-----------------------------------------+\n");
+	printf("| Pilih Pemain:                           |\n");
+	printf("| 1. Pemain 1                             |\n");
+	printf("| 2. Pemain 2                             |\n");
 	printf("+-----------------------------------------+\n");
 }
 
@@ -57,7 +65,7 @@ void display_table(char board[]) {
 void insert(char board[],char *turn,int *valid) {
 	int index;
 	printf("Turn of %c\nEnter index : ", *turn);
-	scanf("%d", &index);
+	scanf_s("%d", &index);
 
 	if (index == SENTINEL) {
 		exit(0);

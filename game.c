@@ -2,18 +2,19 @@
 #include <conio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <string.h>
 #include "tictactoe.h"
 
 int main()
 {
 	char turn = 'X', board[] = {'-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'};
+	char pemain1[50] = "Pemain 1", pemain2[50] = "Pemain 2";
 	bool game = true;
 	int turn_count = 0, valid = 1, opsi, opsidimensi;
 
 	while (game)
 	{
 		cover();
-		system("cls");
 		menu();
 		printf("Pilih Opsi \t: ");
 		scanf("%d", &opsi);
@@ -51,12 +52,23 @@ int main()
 					sw_turn(&turn);
 				}
 				break;
-
+			}
+			break;
+		case 2:
+			int opsiGantiNama;
+			namaOption();
+			printf("Pilih Opsi \t\t: ");
+			scanf("%d", &opsiGantiNama);
+			switch (opsiGantiNama)
+			{
+			case 1:
+				printf("Masukkan Nama Pemain 1 \t: ");
+				break;
+			
 			default:
 				break;
 			}
 			break;
-
 		default:
 			break;
 		}

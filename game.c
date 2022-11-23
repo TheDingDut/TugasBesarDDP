@@ -7,27 +7,27 @@
 
 int main()
 {
-	char turn = 'X', board[] = {'-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'};
+	char turn = 'X', board[][] = {'-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'};
 	char pemain1[50] = "Pemain 1", pemain2[50] = "Pemain 2";
 	bool game = true;
 	int turn_count = 0, valid = 1, opsi, opsidimensi;
 
 	cover();
 	system("cls");
-	while (game)
+	menu();
+	printf("Pilih Opsi \t: ");
+	scanf("%d", &opsi);
+	switch (opsi)
 	{
-		menu();
+	case 1:
+		dimensionOption();
 		printf("Pilih Opsi \t: ");
-		scanf("%d", &opsi);
-		switch (opsi)
+		scanf("%d", &opsidimensi);
+		switch (opsidimensi)
 		{
-		case 1:
-			dimensionOption();
-			printf("Pilih Opsi \t: ");
-			scanf("%d", &opsidimensi);
-			switch (opsidimensi)
+		case 3:
+			while (game)
 			{
-			case 3:
 				display_table(board);
 				insert(board, &turn, &valid);
 				turn_count++;
@@ -54,30 +54,30 @@ int main()
 				}
 				break;
 			}
-			break;
-		case 2:
-			printf("\nMasukkan Nama Pemain 1 \t: ");
-			scanf("%s", pemain1);
-			printf("Masukkan Nama Pemain 2 \t: ");
-			scanf("%s", pemain2);
-			
-			int count = strlen(pemain1);
-			int count1 = strlen(pemain2);
-
-			printf("\nPemain 1 \t\t: ");
-			for (int i = 0; i < count; i++)
-			{
-				printf("%c", pemain1[i]);
-			}
-
-			printf("\nPemain 2 \t\t: ");
-			for (int i = 0; i < count1; i++)
-			{
-				printf("%c", pemain2[i]);
-			}
-			break;
-		default:
-			break;
 		}
+		break;
+	case 2:
+		printf("\nMasukkan Nama Pemain 1 \t: ");
+		scanf("%s", pemain1);
+		printf("Masukkan Nama Pemain 2 \t: ");
+		scanf("%s", pemain2);
+
+		int count = strlen(pemain1);
+		int count1 = strlen(pemain2);
+
+		printf("\nPemain 1 \t\t: ");
+		for (int i = 0; i < count; i++)
+		{
+			printf("%c", pemain1[i]);
+		}
+
+		printf("\nPemain 2 \t\t: ");
+		for (int i = 0; i < count1; i++)
+		{
+			printf("%c", pemain2[i]);
+		}
+		break;
+	default:
+		break;
 	}
 }

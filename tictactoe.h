@@ -8,7 +8,7 @@ void cover(){
 	printf("| Selamat Datang di                       |\n");
 	printf("| Permainan TicTacToe                     |\n");
 	printf("| Disusun Oleh:                           |\n");
-	printf("| 1. Hasna Fitriyani Khairunnisa          |\n");
+	printf("| 1. Hasna Fitriyani Khairunissa          |\n");
 	printf("| 2. Muhammad Fikri Nur Sya'bani          |\n");
 	printf("| 3. Naffa Lenteranisa                    |\n");
 	printf("+-----------------------------------------+\n");
@@ -17,7 +17,7 @@ void cover(){
 }
 
 void menu(){
-	printf("+-----------------------------------------+\n");
+	printf("\n+-----------------------------------------+\n");
 	printf("| Menu:                                   |\n");
 	printf("| 1. Mulai Main                           |\n");
 	printf("| 2. Ganti Nama Pemain                    |\n");

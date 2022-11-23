@@ -12,9 +12,10 @@ int main()
 	bool game = true;
 	int turn_count = 0, valid = 1, opsi, opsidimensi;
 
+	cover();
+	system("cls");
 	while (game)
 	{
-		cover();
 		menu();
 		printf("Pilih Opsi \t: ");
 		scanf("%d", &opsi);

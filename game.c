@@ -12,21 +12,22 @@ int main()
 	bool game = true;
 	int turn_count = 0, valid = 1, opsi, opsidimensi;
 
-	while (game)
+	cover();
+	system("cls");
+	menu();
+	printf("Pilih Opsi \t: ");
+	scanf("%d", &opsi);
+	switch (opsi)
 	{
-		cover();
-		menu();
+	case 1:
+		dimensionOption();
 		printf("Pilih Opsi \t: ");
-		scanf("%d", &opsi);
-		switch (opsi)
+		scanf("%d", &opsidimensi);
+		switch (opsidimensi)
 		{
-		case 1:
-			dimensionOption();
-			printf("Pilih Opsi \t: ");
-			scanf("%d", &opsidimensi);
-			switch (opsidimensi)
+		case 3:
+			while (game)
 			{
-			case 3:
 				display_table(board);
 				insert(board, &turn, &valid);
 				turn_count++;
@@ -51,32 +52,33 @@ int main()
 				{
 					sw_turn(&turn);
 				}
-				break;
-			}
-			break;
-		case 2:
-			printf("\nMasukkan Nama Pemain 1 \t: ");
-			scanf("%s", pemain1);
-			printf("Masukkan Nama Pemain 2 \t: ");
-			scanf("%s", pemain2);
-			
-			int count = strlen(pemain1);
-			int count1 = strlen(pemain2);
-
-			printf("\nPemain 1 \t\t: ");
-			for (int i = 0; i < count; i++)
-			{
-				printf("%c", pemain1[i]);
 			}
 
-			printf("\nPemain 2 \t\t: ");
-			for (int i = 0; i < count1; i++)
-			{
-				printf("%c", pemain2[i]);
-			}
-			break;
-		default:
 			break;
 		}
+		break;
+	case 2:
+		printf("\nMasukkan Nama Pemain 1 \t: ");
+		scanf("%s", pemain1);
+		printf("Masukkan Nama Pemain 2 \t: ");
+		scanf("%s", pemain2);
+
+		int count = strlen(pemain1);
+		int count1 = strlen(pemain2);
+
+		printf("\nPemain 1 \t\t: ");
+		for (int i = 0; i < count; i++)
+		{
+			printf("%c", pemain1[i]);
+		}
+
+		printf("\nPemain 2 \t\t: ");
+		for (int i = 0; i < count1; i++)
+		{
+			printf("%c", pemain2[i]);
+		}
+		break;
+	default:
+		break;
 	}
 }

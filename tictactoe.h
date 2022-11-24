@@ -38,25 +38,25 @@ bool check_win(char board[]) {
 	bool win = false;
 
 	//Horizontal 1
-	if (board[0] != '-') {
-		if (board[0] == board[1]) {
-			if (board[0] == board[2]) {
+	if (board[0][0] != '-') {
+		if (board[0][0] == board[0][1]) {
+			if (board[0][0] == board[0][2]) {
 				win = true;
 			}
 		}
 	}
 	//Horizontal 2
-	if (board[3] != '-') {
-		if (board[3] == board[4]) {
-			if (board[3] == board[5]) {
+	if (board[0][1] != '-') {
+		if (board[0][1] == board[0][2]) {
+			if (board[0][1] == board[0][3]) {
 				win = true;
 			}
 		}
 	}
 	//Horizontal 3
-	if (board[6] != '-') {
-		if (board[6] == board[7]) {
-			if (board[6] == board[8]) {
+	if (board[0][2] != '-') {
+		if (board[0][2] == board[0][3]) {
+			if (board[0][2] == board[0][4]) {
 				win = true;
 			}
 		}

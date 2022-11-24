@@ -2,18 +2,18 @@
 #include <stdbool.h>
 #define SENTINEL -999
 
-void display_table(char board[]) {
-	int i;
+void display_table(char board[][]) {
 
-	for (i = 0; i < 9; i++) {
-		printf("%c ", board[i]);
-		if (((i + 1) % 3) == 0) {
-			printf("\n");
-		}
-	}
+	printf("+---------------------\n");
+	printf("|  %c  |  %c  |  %c  |\n", board[0][0], board[0][1], board[0][2]);
+	printf("+---------------------\n");
+	printf("|  %c  |  %c  |  %c  |\n", board[1][0], board[1][1], board[1][2]);
+	printf("+---------------------\n");
+	printf("|  %c  |  %c  |  %c  |\n", board[2][0], board[2][1], board[2][2]);
+	printf("+---------------------\n");
 }
 
-void insert(char board[],char *turn) {
+void insert(char board[][],char *turn) {
 	int index;
 	printf("Turn of %c\nEnter index : ", *turn);
 	scanf_s("%d", &index);
